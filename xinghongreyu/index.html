@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="猩红热预防指南：提供猩红热的症状表现、传播途径、科学预防措施及家庭护理建议，帮助家长和公众有效识别与防范猩红热，保障儿童健康安全。">
+    <meta name="keywords" content="猩红热预防,猩红热症状,猩红热治疗,儿童传染病,呼吸道疾病预防">
+    <title>猩红热预防-儿童呼吸道传染病科学防护与家庭护理指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d32f2f;
+            --primary-light: #ffcdd2;
+            --secondary-color: #4a4a4a;
+            --accent-color: #fbc02d;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--text-main);
+            text-align: center;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--secondary-color);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .cta-button:hover {
+            background-color: #b71c1c;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-light) 0%, #ffebee 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+
+        /* Warning Banner */
+        .warning-banner {
+            background-color: #fff3e0;
+            border-left: 5px solid var(--accent-color);
+            padding: 15px;
+            margin: -20px auto 40px;
+            max-width: var(--container-width);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .warning-icon {
+            font-size: 1.5rem;
+        }
+
+        /* Symptoms Grid */
+        .symptoms-section {
+            padding: 60px 0;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card.highlight {
+            border-top-color: var(--primary-color);
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Prevention Steps */
+        .prevention-section {
+            background-color: white;
+            padding: 60px 0;
+        }
+
+        .step-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            background-color: var(--primary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+
+        .step-content h3 {
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .step-content p {
+            color: var(--text-secondary);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 60px 0;
+            background-color: #f4f4f4;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .faq-question {
+            padding: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+        }
+
+        .faq-question:hover {
+            background-color: #fafafa;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-secondary);
+            display: none;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #ccc;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #555;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Simplified for mobile */
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"></path><path d="M12 6v6l4 2"></path></svg>
+                健康卫士
+            </div>
+            <nav class="nav-links">
+                <a href="#symptoms">症状识别</a>
+                <a href="#prevention">预防措施</a>
+                <a href="#faq">常见问题</a>
+                <a href="#contact">联系我们</a>
+            </nav>
+            <a href="#contact" class="cta-button">立即咨询</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>猩红热预防<br>科学防护与家庭护理指南</h1>
+                <p>了解猩红热的传播途径与早期症状，掌握正确的预防方法。关注儿童呼吸道健康，为家庭构筑坚实的防护屏障。</p>
+                <div style="display: flex; gap: 15px; justify-content: center;">
+                    <a href="#prevention" class="cta-button" style="background-color: var(--secondary-color);">查看预防指南</a>
+                    <a href="#symptoms" class="cta-button" style="background-color: transparent; border: 2px solid var(--primary-color); color: var(--primary-color);">了解症状</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Warning Banner -->
+        <div class="container">
+            <div class="warning-banner">
+                <span class="warning-icon">⚠️</span>
+                <p><strong>注意：</strong>猩红热主要通过飞沫传播，高发于学龄前及学龄儿童。一旦发现疑似症状，请及时隔离并就医。</p>
+            </div>
+        </div>
+
+        <!-- Symptoms Section -->
+        <section id="symptoms" class="symptoms-section">
+            <div class="container">
+                <h2 class="section-title">猩红热的主要症状</h2>
+                <p class="section-subtitle">早期识别是阻断传播的关键。猩红热通常起病急骤，若能及时发现并隔离，可有效保护周围人群。</p>
+                
+                <div class="grid-3">
+                    <article class="card highlight">
+                        <div class="card-icon">🌡️</div>
+                        <h3>突发高热</h3>
+                        <p>体温可迅速升至39℃以上，伴有畏寒、头痛、全身不适等急性中毒症状。这是最常见的首发表现。</p>
+                    </article>
+                    
+                    <article class="card">
+                        <div class="card-icon">🌸</div>
+                        <h3>咽喉红肿疼痛</h3>
+                        <p>咽峡部充血明显，扁桃体肿大，表面可能有脓性分泌物。患儿常诉咽痛、吞咽困难。</p>
+                    </article>
+                    
+                    <article class="card">
+                        <div class="card-icon">✨</div>
+                        <h3>全身皮疹</h3>
+                        <p>发热后24小时内出现典型皮疹。表现为全身皮肤出现猩红色弥漫性充血性皮疹，压之褪色。</p>
+                    </article>
+                    
+                    <article class="card">
+                        <div class="card-icon">✋</div>
+                        <h3>“草莓舌”</h3>
+                        <p>舌乳头红肿突起，状如草莓，舌苔薄白或脱屑后呈片状剥脱，这是猩红热的特征性体征。</p>
+                    </article>
+                    
+                    <article class="card">
+                        <div class="card-icon">✂️</div>
+                        <h3>口周苍白圈</h3>
+                        <p>口鼻周围皮肤苍白，与周围充血的皮疹形成鲜明对比，医学上称为“口周苍白圈”。</p>
+                    </article>
+                    
+                    <article class="card">
+                        <div class="card-icon">🦠</div>
+                        <h3>淋巴结肿大</h3>
+                        <p>颈部、颌下或腋下淋巴结常可触及肿大，伴有触痛，这是细菌感染扩散的常见反应。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prevention Section -->
+        <section id="prevention" class="prevention-section">
+            <div class="container">
+                <h2 class="section-title">如何有效预防猩红热</h2>
+                <p class="section-subtitle">猩红热是由A组β溶血性链球菌引起的急性呼吸道传染病。预防的核心在于切断传播途径和增强免疫力。</p>
+                
+                <div class="grid-3">
+                    <div class="card">
+                        <h3>1. 保持良好的卫生习惯</h3>
+                        <p>勤洗手是预防传染病最有效的方法。在饭前便后、外出归来、接触公共物品后，应用肥皂或洗手液按照“七步洗手法”彻底清洁双手，去除手部细菌和病毒。</p>
+                    </div>
+                    <div class="card">
+                        <h3>2. 呼吸道隔离与防护</h3>
+                        <p>猩红热患者是主要传染源。在疾病高发季节，应尽量避免带孩子去人群密集、通风不良的公共场所。若家中有人患病，应进行隔离治疗，患者使用过的餐具、玩具、衣物应定期消毒。</p>
+                    </div>
+                    <div class="card">
+                        <h3>3. 增强体质与环境通风</h3>
+                        <p>保持室内空气流通，每天开窗通风至少2-3次，每次30分钟以上。加强户外锻炼，保证充足的睡眠，均衡饮食，提高儿童自身的抗病能力。</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 50px;">
+                    <h3 style="text-align: center; margin-bottom: 30px;">日常护理建议</h3>
+                    <div class="step-list">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>多饮温水</h3>
+                                <p>发热期间水分流失快，应鼓励患儿多喝温开水，有助于促进代谢，加速毒素排出，缓解咽喉肿痛。</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>饮食清淡易消化</h3>
+                                <p>患病期间食欲可能下降，应给予流质或半流质饮食（如稀粥、面条、蛋羹），避免辛辣、坚硬或过烫的食物刺激咽喉。</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>密切观察病情</h3>
+                                <p>在治疗和恢复期，需密切监测体温变化和皮疹消退情况。若出现高热不退、呼吸困难或皮疹迅速增多，应及时复诊。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <h2 class="section-title">常见问题解答</h2>
+                <div class="grid-3" style="grid-template-columns: 1fr;">
+                    <div class="faq-item">
+                        <div class="faq-question">猩红热会传染给成年人吗？</div>
+                        <div class="faq-answer">
+                            <p>是的，猩红热不仅儿童易感，成年人同样可以感染。不过，成年人感染后症状通常较轻，或者仅表现为上呼吸道感染症状。因此，照顾患病儿童时，家长和看护人员也应注意防护。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">得过猩红热后还会再得吗？</div>
+                        <div class="faq-answer">
+                            <p>人体感染A组链球菌后，虽然会产生一定的免疫力，但这种免疫力并非终身免疫。再次感染不同型别的A组链球菌仍有可能发病，因此预防措施依然重要。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">猩红热需要使用抗生素吗？</div>
+                        <div class="faq-answer">
+                            <p>猩红热是由细菌引起的，因此抗生素治疗是必要的。青霉素是首选药物，通常疗程为10天左右。请在医生指导下规范用药，切勿自行停药，以免引发风湿热等并发症。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">皮疹退去后皮肤会脱皮吗？</div>
+                        <div class="faq-answer">
+                            <p>部分患儿在发热消退后，皮肤会出现片状脱屑，尤其是手指、脚趾边缘，这属于正常现象，通常无需特殊处理，保持皮肤清洁干燥即可。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>健康卫士</h4>
+                    <p style="color: #ccc; font-size: 0.9rem;">致力于提供科学、权威的儿童健康防护知识，守护每一个孩子的健康成长。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#symptoms">症状自查</a></li>
+                        <li><a href="#prevention">预防指南</a></li>
+                        <li><a href="#faq">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>电话：400-123-4567</li>
+                        <li>邮箱：health@guardian.com</li>
+                        <li>地址：健康路88号健康大厦</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 健康卫士科普平台. 仅供科普参考，具体诊疗请咨询专业医生。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
