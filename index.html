@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>土豆韦伯 - 沉浸式音乐体验与经典作品赏析</title>
+    <meta name="description" content="土豆韦伯官方网站，致力于呈现经典作曲家韦伯的音乐遗产。提供作品赏析、生平介绍、乐评文章及在线试听指南，打造古典音乐爱好者的专属空间。">
+    <meta name="keywords" content="土豆韦伯,韦伯,古典音乐,歌剧,作曲家,莫扎特,音乐鉴赏,古典乐">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #c0392b;
+            --bg-color: #fdfbf7;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-color: #e0e0e0;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* 布局容器 */
+        .container {
+            width: 90%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .header-actions .btn {
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(135deg, rgba(44, 62, 80, 0.9), rgba(192, 57, 43, 0.8)), url('https://picsum.photos/seed/piano/1920/1080.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            animation: fadeIn Up 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: white;
+            color: var(--primary-color);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* 核心介绍 */
+        .intro-section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .intro-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .intro-text p {
+            margin-bottom: 20px;
+            color: var(--text-secondary);
+            text-align: justify;
+        }
+
+        .intro-highlight {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid var(--accent-color);
+            margin: 20px 0;
+        }
+
+        .intro-image img {
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* 热门作品 */
+        .works-section {
+            background-color: #f4f4f4;
+            padding: 80px 0;
+        }
+
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .work-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .work-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .work-thumb {
+            height: 200px;
+            background-color: #ddd;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .work-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .work-card:hover .work-thumb img {
+            transform: scale(1.05);
+        }
+
+        .work-info {
+            padding: 25px;
+        }
+
+        .work-tag {
+            font-size: 0.8rem;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .work-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .work-info p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+
+        .work-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border-color);
+            padding-top: 15px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .play-btn {
+            background-color: var(--primary-color);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s;
+        }
+
+        .play-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* 乐评文章 */
+        .articles-section {
+            padding: 80px 0;
+        }
+
+        .article-list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .article-item {
+            display: flex;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .article-item:hover {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .article-img {
+            width: 300px;
+            flex-shrink: 0;
+        }
+
+        .article-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .article-content {
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .article-date {
+            font-size: 0.85rem;
+            color: #999;
+            margin-bottom: 10px;
+        }
+
+        .article-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .article-content p {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .read-more {
+            color: var(--accent-color);
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .read-more::after {
+            content: '→';
+            margin-left: 5px;
+            transition: margin-left 0.2s;
+        }
+
+        .read-more:hover::after {
+            margin-left: 10px;
+        }
+
+        /* 选购指南 */
+        .guide-section {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 80px 0;
+        }
+
+        .guide-section h2 {
+            color: white;
+        }
+
+        .guide-section p {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .guide-card {
+            background: rgba(255,255,255,0.05);
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .guide-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .guide-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .guide-card p {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+
+        .guide-btn {
+            border: 1px solid white;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .guide-btn:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #222;
+            color: #999;
+            padding: 60px 0 20px;
+            font-size: 0.9rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h4 {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-col h5 {
+            color: white;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 992px) {
+            .intro-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .article-item {
+                flex-direction: column;
+            }
+
+            .article-img {
+                width: 100%;
+                height: 250px;
+            }
+
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .works-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        /* 动画关键帧 */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部导航 -->
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <span>♪</span> 土豆韦伯
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#works">经典作品</a></li>
+                    <li><a href="#articles">深度赏析</a></li>
+                    <li><a href="#guide">选购指南</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-primary" onclick="showToast('请登录以访问完整曲库')">会员登录</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero 区域 -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>探索古典乐的深邃魅力</h1>
+            <p>汇聚韦伯经典歌剧、交响曲与钢琴作品，为您提供高清音质与专业乐评的沉浸式音乐体验。</p>
+            <a href="#works" class="hero-btn">开始聆听</a>
+        </div>
+    </section>
+
+    <!-- 核心介绍 -->
+    <section class="intro-section container">
+        <div class="section-header">
+            <h2>关于土豆韦伯</h2>
+            <p>致力于推广古典音乐文化，打造专业、纯净的音乐欣赏平台。</p>
+        </div>
+        <div class="intro-grid">
+            <div class="intro-text">
+                <h3>重塑古典音乐体验</h3>
+                <p>“土豆韦伯”是一个专注于古典音乐领域的在线资源平台。我们深信，古典音乐不仅是历史的遗产，更是当代情感的共鸣。通过精良的录音技术与严谨的乐理分析，我们帮助听众跨越时间的壁垒，重新发现那些不朽的旋律。</p>
+                <div class="intro-highlight">
+                    <strong>平台特色：</strong><br>
+                    • 高保真无损音质<br>
+                    • 详尽的作曲家生平资料<br>
+                    • 专业乐评与演奏指导
+                </div>
+                <p>无论是初次接触古典乐的新手，还是寻求深度解析的资深乐迷，这里都有属于您的音乐角落。</p>
+            </div>
+            <div class="intro-image">
+                <img src="https://picsum.photos/seed/classical/600/400.jpg" alt="古典音乐会现场">
+            </div>
+        </div>
+    </section>
+
+    <!-- 热门作品 -->
+    <section id="works" class="works-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>热门经典作品</h2>
+                <p>精选韦伯及同时期作曲家的传世名作，一键试听。</p>
+            </div>
+            <div class="works-grid">
+                <!-- 卡片 1 -->
+                <article class="work-card">
+                    <div class="work-thumb">
+                        <img src="https://picsum.photos/seed/opera/400/300.jpg" alt="魔弹射手">
+                    </div>
+                    <div class="work-info">
+                        <span class="work-tag">歌剧</span>
+                        <h3>魔弹射手</h3>
+                        <p>韦伯最著名的歌剧作品，德国浪漫主义歌剧的里程碑，充满了神秘与奇幻色彩。</p>
+                        <div class="work-meta">
+                            <span>时长: 120分钟</span>
+                            <a href="#" class="play-btn" aria-label="播放">▶</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- 卡片 2 -->
+                <article class="work-card">
+                    <div class="work-thumb">
+                        <img src="https://picsum.photos/seed/symphony/400/300.jpg" alt="E小调第1号交响曲">
+                    </div>
+                    <div class="work-info">
+                        <span class="work-tag">交响曲</span>
+                        <h3>E小调第1号交响曲</h3>
+                        <p>早期浪漫主义交响乐的代表作，旋律优美而富有戏剧张力。</p>
+                        <div class="work-meta">
+                            <span>时长: 45分钟</span>
+                            <a href="#" class="play-btn" aria-label="播放">▶</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- 卡片 3 -->
+                <article class="work-card">
+                    <div class="work-thumb">
+                        <img src="https://picsum.photos/seed/piano/400/300.jpg" alt="邀舞">
+                    </div>
+                    <div class="work-info">
+                        <span class="work-tag">钢琴曲</span>
+                        <h3>邀舞</h3>
+                        <p>著名的钢琴独奏曲，后被改编为管弦乐曲，描绘了优雅的舞会场景。</p>
+                        <div class="work-meta">
+                            <span>时长: 10分钟</span>
+                            <a href="#" class="play-btn" aria-label="播放">▶</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 深度赏析 -->
+    <section id="articles" class="articles-section container">
+        <div class="section-header">
+            <h2>深度赏析与乐评</h2>
+            <p>专家解读，带你读懂音乐背后的故事。</p>
+        </div>
+        <div class="article-list">
+            <article class="article-item">
+                <div class="article-img">
+                    <img src="https://picsum.photos/seed/conductor/600/400.jpg" alt="指挥家分析">
+                </div>
+                <div class="article-content">
+                    <div class="article-date">2023年10月15日</div>
+                    <h3>如何欣赏韦伯的歌剧序曲：从结构到情感</h3>
+                    <p>韦伯的序曲不仅是开场的前奏，更是整部歌剧戏剧张力的浓缩。本文将深入解析《魔弹射手》序曲中的半音阶技巧与动机发展，帮助听众在第一分钟就进入那个神秘的森林世界...</p>
+                    <a href="#" class="read-more">阅读全文</a>
+                </div>
+            </article>
+            <article class="article-item">
+                <div class="article-img">
+                    <img src="https://picsum.photos/seed/history/600/400.jpg" alt="音乐史话">
+                </div>
+                <div class="article-content">
+                    <div class="article-date">2023年09月28日</div>
+                    <h3>浪漫主义音乐的先驱：卡尔·玛丽亚·冯·韦伯</h3>
+                    <p>韦伯不仅是作曲家，更是音乐评论家和指挥家。他如何打破了当时意大利歌剧和法国歌剧的统治，为德国民族歌剧的诞生奠定了坚实基础？让我们回顾这位大师的生平...</p>
+                    <a href="#" class="read-more">阅读全文</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- 选购指南 -->
+    <section id="guide" class="guide-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: white;">新手选购指南</h2>
+                <p style="color: rgba(255,255,255,0.8);">不知道从何开始？我们为您准备了三步入门法。</p>
+            </div>
+            <div class="guide-grid">
+                <div class="guide-card">
+                    <div class="guide-icon">🎧</div>
+                    <h3>设备选择</h3>
+                    <p>一副好的耳机是欣赏古典乐的基础。推荐选择声场开阔、低频不轰头的开放式耳机。</p>
+                    <button class="guide-btn">查看推荐</button>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-icon">📚</div>
+                    <h3>曲目推荐</h3>
+                    <p>从《邀舞》等轻音乐入门，逐步过渡到《自由射手》等大型歌剧，建立审美自信。</p>
+                    <button class="guide-btn">开始听单</button>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-icon">🎼</div>
+                    <h3>专业术语</h3>
+                    <p>了解 Allegro（快板）、Adagio（慢板）等基本术语，助您更精准地感受音乐情绪。</p>
+                    <button class="guide-btn">学习术语</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h4>土豆韦伯</h4>
+                    <p>我们致力于让古典音乐触手可及，为您呈现最纯粹的音乐享受。无论身在何处，音乐常伴左右。</p>
+                </div>
+                <div class="footer-col">
+                    <h5>探索</h5>
+                    <ul>
+                        <li><a href="#">全部作品</a></li>
+                        <li><a href="#">作曲家名录</a></li>
+                        <li><a href="#">唱片推荐</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>社区</h5>
+                    <ul>
+                        <li><a href="#">乐友论坛</a></li>
+                        <li><a href="#">音乐沙龙</a></li>
+                        <li><a href="#">活动预告</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>支持</h5>
+                    <ul>
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">联系客服</a></li>
+                        <li><a href="#">版权声明</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 土豆韦伯. All Rights Reserved. 此页面为演示设计。</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 简单的 Toast 提示框样式 -->
+    <div id="toast" style="visibility: hidden; min-width: 250px; background-color: #333; color: #fff; text-align: center; border-radius: 4px; padding: 16px; position: fixed; z-index: 1001; left: 50%; bottom: 30px; transform: translateX(-50%); font-size: 17px;">
+        提示信息
+    </div>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+
+    <script>
+        // 简单的交互逻辑
+        function showToast(message) {
+            var x = document.getElementById("toast");
+            x.textContent = message;
+            x.style.visibility = "visible";
+            x.style.opacity = "1";
+            
+            // 3秒后隐藏
+            setTimeout(function(){ 
+                x.style.visibility = "hidden"; 
+                x.style.opacity = "0";
+            }, 3000);
+        }
+
+        // 模拟播放按钮点击
+        document.querySelectorAll('.play-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                showToast('开始播放：试听功能仅限演示');
+            });
+        });
+
+        // 导航平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+                  </html>
