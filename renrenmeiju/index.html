@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="人人美剧官网提供最新的美剧资源、高清在线观看、美剧推荐及剧情解析。涵盖热门美剧、经典美剧、高分美剧等，支持多设备流畅播放。">
+    <meta name="keywords" content="人人美剧官网,在线看美剧,美剧资源,美剧推荐,高清美剧">
+    <title>人人美剧官网-高清美剧在线观看与推荐平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #00d2ff;
+            --secondary-color: #3a7bd5;
+            --accent-color: #ff4757;
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .flex {
+            display: flex;
+            align-items: center;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .grid {
+            display: grid;
+            gap: var(--spacing-unit);
+        }
+
+        .text-center { text-align: center; }
+        .text-primary { color: var(--primary-color); }
+        .text-accent { color: var(--accent-color); }
+
+        /* Header */
+        header {
+            background-color: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            padding: 16px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 24px;
+        }
+
+        .nav-menu a {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--primary-color);
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-box input {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 8px 12px;
+            border-radius: 4px;
+            color: var(--text-main);
+            width: 200px;
+            transition: width 0.3s;
+        }
+
+        .search-box input:focus {
+            width: 250px;
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9)), 
+                        url('https://picsum.photos/seed/drama_hero/1920/1080') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-tag {
+            background: var(--accent-color);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            max-width: 600px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 32px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 210, 255, 0.4);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            margin-left: 12px;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--text-main);
+            background: rgba(255,255,255,0.05);
+        }
+
+        /* Section Styling */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 12px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .section-more {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* Ranking Grid */
+        .ranking-grid {
+            grid-template-columns: repeat(6, 1fr);
+            gap: 16px;
+        }
+
+        .rank-card {
+            background: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .rank-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .rank-badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: var(--accent-color);
+            color: white;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            border-bottom-left-radius: 8px;
+        }
+
+        .rank-img {
+            width: 100%;
+            aspect-ratio: 2/3;
+            object-fit: cover;
+        }
+
+        .rank-info {
+            padding: 12px;
+        }
+
+        .rank-title {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .rank-meta {
+            font-size: 12px;
+            color: var(--text-muted);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Banner Grid */
+        .banner-grid {
+            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-rows: 200px 200px;
+        }
+
+        .banner-card {
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+            cursor: pointer;
+        }
+
+        .banner-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+        }
+
+        .banner-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .banner-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .banner-desc {
+            font-size: 12px;
+            color: #ddd;
+        }
+
+        .banner-card.large {
+            grid-column: span 2;
+        }
+
+        /* Categories */
+        .category-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 12px;
+        }
+
+        .category-item {
+            background: var(--bg-card);
+            padding: 16px 8px;
+            text-align: center;
+            border-radius: 6px;
+            transition: all 0.2s;
+            border: 1px solid transparent;
+        }
+
+        .category-item:hover {
+            border-color: var(--primary-color);
+            background: rgba(0, 210, 255, 0.05);
+        }
+
+        .cat-icon {
+            font-size: 24px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .cat-name {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* Latest Updates */
+        .update-list {
+            background: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .update-item {
+            display: flex;
+            padding: 16px;
+            border-bottom: 1px solid var(--border-color);
+            transition: background 0.2s;
+        }
+
+        .update-item:last-child {
+            border-bottom: none;
+        }
+
+        .update-item:hover {
+            background: rgba(255,255,255,0.03);
+        }
+
+        .update-img {
+            width: 80px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-right: 16px;
+            flex-shrink: 0;
+        }
+
+        .update-info {
+            flex: 1;
+        }
+
+        .update-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .update-meta {
+            font-size: 12px;
+            color: var(--text-muted);
+            display: flex;
+            gap: 12px;
+        }
+
+        .episode-tag {
+            background: var(--primary-color);
+            color: #000;
+            padding: 2px 6px;
+            border-radius: 2px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background: #0b1120;
+            padding: 60px 0 20px;
+            margin-top: 60px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand p {
+            color: var(--text-muted);
+            margin-top: 16px;
+            font-size: 14px;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .ranking-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .banner-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+            .banner-card.large {
+                grid-column: span 1;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .nav-menu { display: none; }
+            .search-box { display: none; }
+            .hero h1 { font-size: 32px; }
+            .ranking-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr; }
+            .update-item { flex-direction: column; }
+            .update-img { width: 100%; height: 150px; margin-bottom: 12px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container flex justify-between">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary-color)"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+                人人美剧<span>官网</span>
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">热门美剧</a></li>
+                    <li><a href="#">经典美剧</a></li>
+                    <li><a href="#">高分榜单</a></li>
+                    <li><a href="#">动漫美剧</a></li>
+                    <li><a href="#">影视资讯</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索美剧名称...">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <span class="hero-tag">本周重磅</span>
+                <h1>《绝命毒师》重映版：经典回顾，致敬传奇</h1>
+                <p>沃尔特·怀特的故事从未结束。人人美剧官网独家呈现高清修复版全集，带您重温这部荣获艾美奖的巅峰之作。</p>
+                <div>
+                    <a href="#" class="btn btn-primary">立即观看</a>
+                    <a href="#" class="btn btn-outline">加入片单</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Hot Ranking -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">本周热门榜单</h2>
+                    <a href="#" class="section-more">查看更多 &rarr;</a>
+                </div>
+                <div class="grid ranking-grid">
+                    <!-- Rank 1 -->
+                    <article class="rank-card">
+                        <div class="rank-badge">1</div>
+                        <img src="https://picsum.photos/seed/stranger/200/300" alt="怪奇物语" class="rank-img">
+                        <div class="rank-info">
+                            <h3 class="rank-title">怪奇物语</h3>
+                            <div class="rank-meta">
+                                <span>科幻</span>
+                                <span class="text-primary">9.8分</span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Rank 2 -->
+                    <article class="rank-card">
+                        <div class="rank-badge">2</div>
+                        <img src="https://picsum.photos/seed/breaking/200/300" alt="绝命毒师" class="rank-img">
+                        <div class="rank-info">
+                            <h3 class="rank-title">绝命毒师</h3>
+                            <div class="rank-meta">
+                                <span>犯罪</span>
+                                <span class="text-primary">9.9分</span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Rank 3 -->
+                    <article class="rank-card">
+                        <div class="rank-badge">3</div>
+                        <img src="https://picsum.photos/seed/west/200/300" alt="西部世界" class="rank-img">
+                        <div class="rank-info">
+                            <h3 class="rank-title">西部世界</h3>
+                            <div class="rank-meta">
+                                <span>科幻</span>
+                                <span class="text-primary">9.5分</span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Rank 4 -->
+                    <article class="rank-card">
+                        <div class="rank-badge">4</div>
+                        <img src="https://picsum.photos/seed/money/200/300" alt="风骚律师" class="rank-img">
+                        <div class="rank-info">
+                            <h3 class="rank-title">风骚律师</h3>
+                            <div class="rank-meta">
+                                <span>剧情</span>
+                                <span class="text-primary">9.7分</span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Rank 5 -->
+                    <article class="rank-card">
+                        <div class="rank-badge">5</div>
+                        <img src="https://picsum.photos/seed/dark/200/300" alt="黑暗" class="rank-img">
+                        <div class="rank-info">
+                            <h3 class="rank-title">黑暗</h3>
+                            <div class="rank-meta">
+                                <span>悬疑</span>
+                                <span class="text-primary">9.6分</span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Rank 6 -->
+                    <article class="rank-card">
+                        <div class="rank-badge">6</div>
+                        <img src="https://picsum.photos/seed/you/200/300" alt="你是凶手" class="rank-img">
+                        <div class="rank-info">
+                            <h3 class="rank-title">你是凶手</h3>
+                            <div class="rank-meta">
+                                <span>惊悚</span>
+                                <span class="text-primary">9.4分</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Featured Banners -->
+            <section class="section" style="margin-top: 48px;">
+                <div class="section-header">
+                    <h2 class="section-title">精选推荐</h2>
+                </div>
+                <div class="grid banner-grid">
+                    <article class="banner-card large" style="background-image: url('https://picsum.photos/seed/poster1/800/400');">
+                        <div class="banner-content">
+                            <h3 class="banner-title">权力的游戏：龙之家族</h3>
+                            <p class="banner-desc">前传剧集，揭开坦格利安家族的辉煌与毁灭。</p>
+                        </div>
+                    </article>
+                    <article class="banner-card" style="background-image: url('https://picsum.photos/seed/poster2/400/400');">
+                        <div class="banner-content">
+                            <h3 class="banner-title">曼达洛人</h3>
+                            <p class="banner-desc">星战宇宙最新力作。</p>
+                        </div>
+                    </article>
+                    <article class="banner-card" style="background-image: url('https://picsum.photos/seed/poster3/400/400');">
+                        <div class="banner-content">
+                            <h3 class="banner-title">最后生还者</h3>
+                            <p class="banner-desc">末日生存之旅。</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Categories -->
+            <section class="section" style="margin-top: 48px;">
+                <div class="section-header">
+                    <h2 class="section-title">美剧分类</h2>
+                </div>
+                <div class="category-list">
+                    <a href="#" class="category-item">
+                        <span class="cat-icon">🚀</span>
+                        <span class="cat-name">科幻美剧</span>
+                    </a>
+                    <a href="#" class="category-item">
+                        <span class="cat-icon">🕵️</span>
+                        <span class="cat-name">悬疑美剧</span>
+                    </a>
+                    <a href="#" class="category-item">
+                        <span class="cat-icon">👮</span>
+                        <span class="cat-name">律政美剧</span>
+                    </a>
+                    <a href="#" class="category-item">
+                        <span class="cat-icon">🧬</span>
+                        <span class="cat-name">医疗美剧</span>
+                    </a>
+                    <a href="#" class="category-item">
+                        <span class="cat-icon">🧛</span>
+                        <span class="cat-name">恐怖美剧</span>
+                    </a>
+                    <a href="#" class="category-item">
+                        <span class="cat-icon">🎬</span>
+                        <span class="cat-name">喜剧美剧</span>
+                    </a>
+                    <a href="#" class="category-item">
+                        <span class="cat-icon">🎭</span>
+                        <span class="cat-name">剧情美剧</span>
+                    </a>
+                    <a href="#" class="category-item">
+                        <span class="cat-icon">⚽</span>
+                        <span class="cat-name">体育美剧</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Latest Updates -->
+            <section class="section" style="margin-top: 48px;">
+                <div class="section-header">
+                    <h2 class="section-title">最新更新</h2>
+                    <a href="#" class="section-more">查看全部 &rarr;</a>
+                </div>
+                <div class="update-list">
+                    <article class="update-item">
+                        <img src="https://picsum.photos/seed/ep1/160/120" alt="海报" class="update-img">
+                        <div class="update-info">
+                            <h3 class="update-title"><a href="#">《辐射》 第一季 第4集</a></h3>
+                            <div class="update-meta">
+                                <span>更新时间：2023-10-25</span>
+                                <span>类型：科幻 / 动作</span>
+                            </div>
+                        </div>
+                        <a href="#" class="episode-tag">播放</a>
+                    </article>
+                    <article class="update-item">
+                        <img src="https://picsum.photos/seed/ep2/160/120" alt="海报" class="update-img">
+                        <div class="update-info">
+                            <h3 class="update-title"><a href="#">《黑袍纠察队》 第五季 第2集</a></h3>
+                            <div class="update-meta">
+                                <span>更新时间：2023-10-24</span>
+                                <span>类型：动作 / 喜剧</span>
+                            </div>
+                        </div>
+                        <a href="#" class="episode-tag">播放</a>
+                    </article>
+                    <article class="update-item">
+                        <img src="https://picsum.photos/seed/ep3/160/120" alt="海报" class="update-img">
+                        <div class="update-info">
+                            <h3 class="update-title"><a href="#">《熊家餐馆》 第三季 第8集</a></h3>
+                            <div class="update-meta">
+                                <span>更新时间：2023-10-23</span>
+                                <span>类型：剧情 / 喜剧</span>
+                            </div>
+                        </div>
+                        <a href="#" class="episode-tag">播放</a>
+                    </article>
+                    <article class="update-item">
+                        <img src="https://picsum.photos/seed/ep4/160/120" alt="海报" class="update-img">
+                        <div class="update-info">
+                            <h3 class="update-title"><a href="#">《继承之战》 第四季 第4集</a></h3>
+                            <div class="update-meta">
+                                <span>更新时间：2023-10-22</span>
+                                <span>类型：剧情 / 商业</span>
+                            </div>
+                        </div>
+                        <a href="#" class="episode-tag">播放</a>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary-color)"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+                        人人美剧<span>官网</span>
+                    </a>
+                    <p>人人美剧官网致力于为用户提供最新、最全、最高清的美剧在线观看服务。我们精选全球优质剧集，支持多终端同步，让您的追剧体验更加流畅舒适。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">最新剧集</a></li>
+                        <li><a href="#">高分榜单</a></li>
+                        <li><a href="#">影视资讯</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>热门分类</h4>
+                    <ul>
+                        <li><a href="#">科幻美剧</a></li>
+                        <li><a href="#">悬疑美剧</a></li>
+                        <li><a href="#">犯罪美剧</a></li>
+                        <li><a href="#">喜剧美剧</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">联系合作</a></li>
+                        <li><a href="#">用户协议</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">版权声明</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 人人美剧官网 版权所有. 本站内容均来自互联网，仅供学习交流使用，请勿用于商业用途。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
