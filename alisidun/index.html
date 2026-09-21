@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="阿里斯顿抽油烟机官方主页，提供高效吸排油烟解决方案、智能烟灶联动产品介绍、厨房美学设计及全国售后维修服务指南。了解最新欧式烟机、侧吸式烟机及变频静音技术。">
+    <meta name="keywords" content="阿里斯顿抽油烟机,抽油烟机,油烟机,厨房电器,厨房净化">
+    <title>阿里斯顿抽油烟机-高效吸排油烟解决方案与智能烟灶联动指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d4a373;
+            --primary-dark: #b08968;
+            --secondary-color: #faedcd;
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-light: #f9f9f9;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --container-width: 1200px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            color: var(--text-main);
+            line-height: 1.6;
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-main);
+            transition: var(--transition);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-dark);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://picsum.photos/seed/kitchen1/1920/1080.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 60px 0;
+            background-color: var(--white);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            color: var(--text-main);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+            font-size: 16px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 30px;
+            color: var(--primary-dark);
+        }
+
+        .feature-item h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .feature-item p {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        /* Product Showcase */
+        .products {
+            padding: 80px 0;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            border: 1px solid #eee;
+        }
+
+        .product-card:hover {
+            box-shadow: var(--shadow);
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            height: 250px;
+            background-color: #f0f0f0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 4px 10px;
+            font-size: 12px;
+            border-radius: 4px;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-category {
+            font-size: 12px;
+            color: var(--text-light);
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .product-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .product-specs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .spec {
+            font-size: 12px;
+            color: var(--text-light);
+            background-color: var(--bg-light);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .price {
+            font-size: 18px;
+            font-weight: 700;
+            color: #e74c3c;
+        }
+
+        .price small {
+            font-size: 12px;
+            font-weight: 400;
+            color: var(--text-light);
+        }
+
+        /* Tech Section */
+        .tech-section {
+            background-color: var(--white);
+            padding: 80px 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .tech-image {
+            flex: 1;
+            min-width: 300px;
+            height: 500px;
+        }
+
+        .tech-image img {
+            width: 100%;
+            height: 100%;
+            border-radius: var(--border-radius);
+        }
+
+        .tech-content {
+            flex: 1;
+            min-width: 300px;
+            padding: 40px;
+        }
+
+        .tech-content h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .tech-list {
+            margin-top: 30px;
+        }
+
+        .tech-list li {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .tech-list li::before {
+            content: "✓";
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 20px;
+            margin-right: 15px;
+            min-width: 25px;
+        }
+
+        .tech-list h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .tech-list p {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        /* Installation & Service */
+        .service-section {
+            padding: 60px 0;
+            background-color: var(--bg-light);
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .service-number {
+            font-size: 40px;
+            font-weight: 700;
+            color: rgba(212, 163, 115, 0.3);
+            line-height: 1;
+        }
+
+        .service-text h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .service-text p {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* FAQ */
+        .faq-section {
+            padding: 80px 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .faq-question:hover {
+            background-color: #f8f8f8;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-light);
+            font-size: 14px;
+            display: none;
+            line-height: 1.8;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: "-";
+        }
+
+        .faq-item.active .faq-question::before {
+            content: "+";
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .footer-brand p {
+            color: #bdc3c7;
+            font-size: 14px;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #bdc3c7;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            font-size: 13px;
+            color: #7f8c8d;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .feature-grid, .product-grid, .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .tech-section {
+                flex-direction: column-reverse;
+            }
+            .tech-image {
+                width: 100%;
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+            .header-actions {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .feature-grid, .product-grid, .service-grid, .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .service-card {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                    <path d="M2 17l10 5 10-5"></path>
+                    <path d="M2 12l10 5 10-5"></path>
+                </svg>
+                <span>阿里斯顿</span>电器
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">产品中心</a></li>
+                    <li><a href="#">技术优势</a></li>
+                    <li><a href="#">安装服务</a></li>
+                    <li><a href="#">企业专区</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn btn-outline">预约安装</a>
+                <a href="#" class="btn btn-primary">联系客服</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>智净厨房，随心掌控</h1>
+                <p>阿里斯顿新一代变频静音抽油烟机，搭载AI智能烟灶联动技术，高达95%油烟吸排率，为您营造清新健康的烹饪环境。</p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary">探索产品系列</a>
+                    <a href="#tech" class="btn btn-outline" style="color: #fff; border-color: #fff;">了解核心技术</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>为什么选择阿里斯顿？</h2>
+                    <p>源自欧洲的精密制造工艺，专注于厨房空气管理解决方案</p>
+                </div>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">🌪️</div>
+                        <h3>强劲吸排</h3>
+                        <p>采用大口径涡轮设计，瞬间吸走烹饪油烟，避免扩散，保持厨房空气洁净。</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🔇</div>
+                        <h3>超静音运行</h3>
+                        <p>搭载低噪直流变频电机，运行噪音低至45dB，让您享受宁静的烹饪时光。</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🤖</div>
+                        <h3>智能联动</h3>
+                        <p>烟灶一键互联，点火自动开启油烟机，关火自动延时关闭，操作便捷省心。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Showcase -->
+        <section id="products" class="products">
+            <div class="container">
+                <div class="section-title">
+                    <h2>明星产品系列</h2>
+                    <p>针对不同厨房结构设计的专业解决方案</p>
+                </div>
+                <div class="product-grid">
+                    <!-- Product 1 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <span class="tag">新品上市</span>
+                            <img src="https://picsum.photos/seed/hood1/400/300.jpg" alt="阿里斯顿iTouch智能触控烟机">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">欧式顶吸</div>
+                            <h3 class="product-title">iTouch 智能触控系列</h3>
+                            <div class="product-specs">
+                                <span class="spec">大吸力</span>
+                                <span class="spec">5.0kPa</span>
+                            </div>
+                            <div class="product-footer">
+                                <div class="price">¥3,999<small>起</small></div>
+                                <a href="#" class="btn btn-outline" style="padding: 4px 12px; font-size: 12px;">查看详情</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 2 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/hood2/400/300.jpg" alt="阿里斯顿S-Line侧吸系列">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">侧吸式</div>
+                            <h3 class="product-title">S-Line 侧吸系列</h3>
+                            <div class="product-specs">
+                                <span class="spec">低空近吸</span>
+                                <span class="spec">易清洗</span>
+                            </div>
+                            <div class="product-footer">
+                                <div class="price">¥2,899<small>起</small></div>
+                                <a href="#" class="btn btn-outline" style="padding: 4px 12px; font-size: 12px;">查看详情</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 3 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <span class="tag">爆款推荐</span>
+                            <img src="https://picsum.photos/seed/hood3/400/300.jpg" alt="阿里斯顿Turbine Pro变频系列">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">变频静音</div>
+                            <h3 class="product-title">Turbine Pro 变频系列</h3>
+                            <div class="product-specs">
+                                <span class="spec">AI智控</span>
+                                <span class="spec">节能</span>
+                            </div>
+                            <div class="product-footer">
+                                <div class="price">¥4,299<small>起</small></div>
+                                <a href="#" class="btn btn-outline" style="padding: 4px 12px; font-size: 12px;">查看详情</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 4 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/hood4/400/300.jpg" alt="阿里斯顿Maxi Max大吸力系列">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">中式深腔</div>
+                            <h3 class="product-title">Maxi Max 大吸力系列</h3>
+                            <div class="product-specs">
+                                <span class="spec">双腔设计</span>
+                                <span class="spec">高效</span>
+                            </div>
+                            <div class="product-footer">
+                                <div class="price">¥3,199<small>起</small></div>
+                                <a href="#" class="btn btn-outline" style="padding: 4px 12px; font-size: 12px;">查看详情</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="#" class="btn btn-primary">浏览全系列产品</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Section -->
+        <section id="tech" class="tech-section">
+            <div class="tech-image">
+                <img src="https://picsum.photos/seed/tech/800/600.jpg" alt="阿里斯顿油烟机内部结构">
+            </div>
+            <div class="tech-content">
+                <h2>硬核科技，守护厨房空气</h2>
+                <p>阿里斯顿抽油烟机融合了欧洲百年制冷技术与现代厨房空气动力学，为您带来卓越的净化体验。</p>
+                <ul class="tech-list">
+                    <li>
+                        <h4>双腔循环系统</h4>
+                        <p>左右双腔独立进风，左右油烟同时快速排出，避免油烟在中间区域聚集，排烟效率提升30%。</p>
+                    </li>
+                    <li>
+                        <h4>易拆洗油网设计</h4>
+                        <p>采用纳米疏油涂层油网，油烟凝结成油滴后自动滑落，无需工具即可轻松拆卸清洗。</p>
+                    </li>
+                    <li>
+                        <h4>智能温控感应</h4>
+                        <p>内置温度传感器，实时监测厨房温度，自动调节风机档位，避免厨房过热，节能省电。</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Service & Installation -->
+        <section class="service-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>专业服务保障</h2>
+                    <p>从购买到安装，全程无忧的专业服务体验</p>
+                </div>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <div class="service-number">01</div>
+                        <div class="service-text">
+                            <h3>免费上门测量</h3>
+                            <p>购买后24小时内，专业技师上门测量厨房尺寸，确认安装位置。</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-number">02</div>
+                        <div class="service-text">
+                            <h3>专业标准安装</h3>
+                            <p>持证上岗技师，严格执行安装规范，确保电路安全与排烟效果。</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-number">03</div>
+                        <div class="service-text">
+                            <h3>售后全程跟踪</h3>
+                            <p>提供24小时全国统一客服热线，定期回访，解决使用中的任何问题。</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-number">04</div>
+                        <div class="service-text">
+                            <h3>延保无忧计划</h3>
+                            <p>购买延保服务，享受核心部件长达5年的质保期，让使用更放心。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="section-title">
+                <h2>常见问题解答</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">如何判断油烟机是否需要清洗？</div>
+                    <div class="faq-answer">当油烟机排烟效果明显下降，或者运行时噪音异常增大，且油网表面油垢明显积聚时，建议及时进行专业清洗。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">侧吸式和顶吸式油烟机哪个好？</div>
+                    <div class="faq-answer">侧吸式油烟机离灶台距离近，吸油烟范围更广，且不碰头；顶吸式款式更传统，适合空间较大的厨房。可根据个人喜好和厨房布局选择。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">油烟机安装需要注意什么？</div>
+                    <div class="faq-answer">安装高度需符合国家标准（顶吸约75cm，侧吸约60cm），确保电源插座安全，排烟管尽量减少弯头，以保证排烟顺畅。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">阿里斯顿油烟机保修期是多久？</div>
+                    <div class="faq-answer">整机保修通常为1-3年，电机等核心部件保修期更长。具体保修政策请以购买时的保修卡或官方说明为准。</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>阿里斯顿电器</h3>
+                    <p>致力于为全球家庭提供高品质的厨房空气管理解决方案，让烹饪成为一种享受。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>产品系列</h4>
+                    <ul>
+                        <li><a href="#">欧式顶吸系列</a></li>
+                        <li><a href="#">侧吸式系列</a></li>
+                        <li><a href="#">中式深腔系列</a></li>
+                        <li><a href="#">集成灶系列</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>支持与服务</h4>
+                    <ul>
+                        <li><a href="#">预约安装</a></li>
+                        <li><a href="#">维修网点查询</a></li>
+                        <li><a href="#">使用指南</a></li>
+                        <li><a href="#">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul class="contact-info">
+                        <li>📞 400-XXX-XXXX</li>
+                        <li>📧 service@ariston-demo.com</li>
+                        <li>📍 上海市浦东新区科技大道88号</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 阿里斯顿电器（中国）有限公司 版权所有 | 本页面仅为设计演示，不涉及真实商业交易。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的FAQ折叠逻辑
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 关闭其他已打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项
+                    item.classList.toggle('active');
+                });
+            });
+
+            // 导航栏滚动效果
+            window.addEventListener('scroll', function() {
+                const header = document.querySelector('header');
+                if (window.scrollY > 50) {
+                    header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
+                } else {
+                    header.style.boxShadow = '0 2px 8px rgba(0,0,0,0.05)';
+                }
+            });
+        });
+    </script>
+</body>
+                  </html>
